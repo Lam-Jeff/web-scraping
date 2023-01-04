@@ -8,8 +8,7 @@
 - First, several spiders are going to crawl different websites (four in total) and store the results in a Firebase database.
 - Next, we need to compare the prices.In order to do that, the project has a product matching model. A machine learning model will match the products by their titles. It then return the best prices between them. The results are sent to a private discord.
 - All the results produced by the project are saved as csv files. There is a script to clean these files.
-- To schedule the scrapings, the project has a Cronjob which allows to schedule tasks locally. The Cronjob looks like this :
- ![[Pasted image 20230103181256.png]]
+- To schedule the scrapings, the project has a Cronjob which allows to schedule tasks locally.
 
 ### Techs, softwares, librairies…
 - Firefox
