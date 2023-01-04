@@ -28,7 +28,7 @@ warnings.warn = warn
 
 
 def loadData():
-    df_original = pd.read_csv('./data/dataset.csv')
+    df_original = pd.read_csv('./dataset.csv')
     df_correct = df_original[['title', 'internal_name', 'category', 'match']].copy()
     df_correct.rename(columns={'title': 'external_name', }, inplace=True)
 
@@ -264,7 +264,7 @@ def findMatch(product, df, model):
                     'match':1}
         load_dotenv()
         PROJECT_PATH = os.getenv('PROJECT_PATH')
-        with open(PROJECT_PATH + f'/data/dataset.csv', 'a') as f:
+        with open(PROJECT_PATH + f'/dataset.csv', 'a') as f:
             dictwriter_object = DictWriter(f, fieldnames=column_names)
             dictwriter_object.writerow(dict_to_add)
         f.close()
